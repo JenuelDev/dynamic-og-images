@@ -1,32 +1,36 @@
-![Netlify Examples](./docs/netlify-examples.png)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# Dynamic OG images with Netlify Edge Functions
+## Getting Started
 
-This is an example of how to use [Netlify Edge Functions](https://docs.netlify.com/edge-functions/overview/) to generate dynamic OpenGraph images for your site.
+First, run the development server:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/dynamic-og-images-example)
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Work locally
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-To use this project locally, first clone the repository:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-    git clone git@github.com:netlify/dynamic-og-images-example.git
-    cd dynamic-og-images-example
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-Install the dependencies:
+## Learn More
 
-    yarn
+To learn more about Next.js, take a look at the following resources:
 
-Install the Netlify CLI:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-    npm install -g netlify-cli
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Start the development server:
+## Deploy on Vercel
 
-    ntl dev --command "yarn dev" --target-port 3000
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-This will open a browser window at `http://localhost:8888` with the example site.
-
-## Demo site
-
-See [the demo site](https://dynamic-og-images-example.netlify.app) for a live example.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
