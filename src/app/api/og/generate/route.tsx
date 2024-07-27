@@ -1,11 +1,6 @@
 import { ImageResponse } from 'next/og';
 export const runtime = 'edge';
-
-interface Props {
-    nextUrl: {
-        searchParams: URLSearchParams
-    }
-}
+import { NextRequest } from 'next/server';
 
 const BackGroundSvg = () => (
     <svg
@@ -120,7 +115,7 @@ const BackGroundSvg = () => (
         </defs>
     </svg >)
 
-export async function GET(params: Props) {
+export async function GET(params: NextRequest) {
     const title = params.nextUrl.searchParams.get('title');
     const slug = params.nextUrl.searchParams.get('slug') ?? '';
     const description = params.nextUrl.searchParams.get('description') ?? '';
