@@ -116,7 +116,7 @@ const BackGroundSvg = () => (
     </svg >)
 
 export async function GET(params: NextRequest) {
-    const title = params.nextUrl.searchParams.get('title');
+    const title = params.nextUrl.searchParams.get('title') ?? '';
     const slug = params.nextUrl.searchParams.get('slug') ?? '';
     const description = params.nextUrl.searchParams.get('description') ?? '';
     const url = `jenuel.dev/blogs/${slug}`;
@@ -140,7 +140,7 @@ export async function GET(params: NextRequest) {
     const ImageRender = () => (
         <div tw="w-full h-full bg-white flex justify-center items-center">
             <div tw="py-18 px-40 flex flex-col">
-                <h1 tw="text-7xl m-0 text-center" style={{ fontFamily: "PoppinsBold" }}>
+                <h1 tw={`${title.length > 30 ? "text-5xl" : "text-7xl"} m-0 text-center`} style={{ fontFamily: "PoppinsBold" }}>
                     {`"${title}"`}
                 </h1>
                 <div tw="text-4xl mb-15 text-center flex justify-center">
